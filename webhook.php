@@ -62,10 +62,10 @@ foreach ($client->parseEvents() as $event) {
 			$json = json_decode($response, true);
 
 			curl_close($ch);
+			 */
             break;
         default:
             error_log('Unsupported event type: ' . $event['type']);
             break;
-			 */
     }
 };
