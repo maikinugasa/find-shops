@@ -42,27 +42,6 @@ foreach ($client->parseEvents() as $event) {
                     error_log('Unsupported message type: ' . $message['type']);
                     break;
             }
-			/*
-		case 'location':
-			$location = $bot->get_location();
-			$lat = $location['latitude'];
-			$log = $location['longitude'];
-			$url = "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=e97210288f59c4af&lat=$lat&lng=$lng";
-			//curlセッションを初期化
-			$ch = curl_init();
-
-			//curlオプションを設定
-			curl_setopt($ch, CURLOPT_URL, $url);
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-			//curlを実行して、その内容を変数に格納
-			$response = curl_exec($ch);
-
-			//jsonエンコードをPHPの変数に変換する
-			$json = json_decode($response, true);
-
-			curl_close($ch);
-			 */
             break;
         default:
             error_log('Unsupported event type: ' . $event['type']);
